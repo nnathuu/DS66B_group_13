@@ -1,0 +1,11 @@
+{
+  "Logistic Regression": 0.1265317217860981,
+  "Decision Tree": 0.13513513513513514,
+  "Random Forest": 0.13302969625855318,
+  "CatBoost": 0.13651807212083733,
+  "Logistic Regression + Class Weight": 0.5374379135202185,
+  "Decision Tree + Class Weight": 0.6173919883581446,
+  "Random Forest + Class Weight": 0.5256370003105961,
+  "CatBoost + Class Weight": 0.5355372767521867,
+  "Tuned CatBoost": 0.12731287613056172
+}

@@ -1,0 +1,9 @@
+Source,Model,ROC-AUC,AP,Note,Split by patient?
+Emi-Johnson & Nkrumah 2025 (Cureus),XGBoost,0.667,,paper; check split,Not verified
+Emi-Johnson & Nkrumah 2025 (Cureus),Logistic Regression,0.642,,paper; check split,Not verified
+Emi-Johnson & Nkrumah 2025 (Cureus),Random Forest,0.63,,paper; check split,Not verified
+GitHub: chaitra-satheesh,LogReg + RandomOverSampler,0.649,0.209,repo README; check split,Not verified
+GitHub: brunoarine/diabetes,Random Forest,0.66,,repo README; check split,Not verified
+GitHub: brunoarine/diabetes,Logistic Regression,0.64,,repo README; check split,Not verified
+GitHub: avithekkc,Random Forest (recall-focused),0.674,,repo README; check split,Not verified
+This work (patient-grouped split),Tuned CatBoost,0.6761326032235192,0.24296853410837116,"95% CI AUC [0.664, 0.688]",Yes
