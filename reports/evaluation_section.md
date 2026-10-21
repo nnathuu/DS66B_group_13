@@ -1,7 +1,6 @@
 # Evaluation (draft for the report - all numbers come from `notebooks/03_evaluation.ipynb`)
 
 > Figures live in `outputs/evaluation/figures/`, tables in `outputs/evaluation/tables/`.
-> Items marked **[CHECK]** must be verified by the team before submission.
 
 ## 1. Evaluation protocol
 
