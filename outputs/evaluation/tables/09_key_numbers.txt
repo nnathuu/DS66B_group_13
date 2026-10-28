@@ -1,5 +1,7 @@
-ROC-AUC 0.676 (95% CI 0.664-0.688); AP 0.243 = 2.17x the random baseline of 0.112.
-At the validation-selected threshold 0.127: Recall 0.508, Precision 0.197, F1 0.284; 28.8% of patients flagged.
-Top 10% highest-risk patients: 28.7% are readmitted (lift 2.56) and capture 25.6% of all readmissions; top 20% capture 39.8%.
-Calibration: ECE 0.005, slope 1.08.
-Cost-sensitive: with FN = 5xFP the optimal threshold is 0.189 (saving 13.0% vs best trivial policy); with FN = 10xFP it is 0.087 (saving 16.7%).
+ROC-AUC 0.676 (95% patient-level bootstrap CI 0.662-0.691); AP 0.245 = 2.19x the random baseline of 0.112.
+At the validation-selected threshold 0.144 (implied FN:FP cost ratio about 6.0): Recall 0.430, Precision 0.215, F1 0.286; 22.4% of patients flagged.
+Top 10% highest-risk patients: 28.0% are readmitted (lift 2.50) and capture 25.0% of all readmissions; top 20% capture 39.9%.
+Calibration: ECE 0.004, slope 1.09.
+Cost-sensitive (thresholds chosen on validation, evaluated on test): with FN = 5xFP the threshold is 0.151 (test saving 12.2% vs best trivial policy); with FN = 10xFP it is 0.086 (saving 16.4%).
+Decision curve: net benefit exceeds both trivial policies (margin 0.001) for threshold probabilities 0.050-0.455 (grid up to 0.60).
+Uncertainty: patient-level cluster bootstrap over 13,998 test patients, B = 2,000 (subgroups B = 1,000).
