@@ -7,5 +7,5 @@
   "Decision Tree + Class Weight": 0.6173919883581446,
   "Random Forest + Class Weight": 0.5256370003105961,
   "CatBoost + Class Weight": 0.5355372767521867,
-  "Tuned CatBoost": 0.12731287613056172
+  "Tuned CatBoost": 0.1355058384219123
 }
