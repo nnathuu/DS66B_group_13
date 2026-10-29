@@ -109,7 +109,7 @@ def run(root: Path, force: bool = False) -> pd.DataFrame:
     train = pd.read_csv(root / "data" / "train_clean.csv")
     test = pd.read_csv(root / "data" / "test_clean.csv")
     groups = pd.read_csv(root / "data" / "train_patient_groups.csv")["patient_nbr"].to_numpy()
-    params = json.load(open(root / "outputs" / "figures" / "best_params.json"))["best_params"]
+    params = json.load(open(root / "outputs" / "best_params.json"))["best_params"]
 
     Xtr, ytr = add_advanced_features(train).drop(columns="target"), train["target"]
     Xte, yte = add_advanced_features(test).drop(columns="target"), test["target"]

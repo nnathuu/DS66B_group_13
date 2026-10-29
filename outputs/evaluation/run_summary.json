@@ -2,7 +2,7 @@
   "final_model": "Tuned CatBoost",
   "primary_selection_metric": "Average Precision (AP)",
   "threshold_selection": "maximum F1 on validation split; threshold not re-optimized on test",
-  "operating_threshold": 0.1355058384219123,
+  "operating_threshold": 0.1450113110100942,
   "train_encounters_expected": 79541,
   "fit_encounters_expected": 63807,
   "validation_encounters_expected": 15734,

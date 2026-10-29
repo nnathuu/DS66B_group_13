@@ -1,13 +1,13 @@
 {
   "model": "CatBoost",
   "best_params": {
-    "depth": 6,
-    "iterations": 405,
-    "l2_leaf_reg": 4.910606075732408,
-    "learning_rate": 0.04644721755761247
+    "depth": 5,
+    "iterations": 764,
+    "l2_leaf_reg": 3.3089382562214897,
+    "learning_rate": 0.05820509320520235
   },
-  "best_cv_ap": 0.23420541477048928,
-  "threshold": 0.1355058384219123,
+  "best_cv_ap": 0.2336410822505653,
+  "threshold": 0.1450113110100942,
   "cv_folds": 3,
   "random_state": 42,
   "threshold_source": "outputs/evaluation/val_predictions_tuned_catboost.csv; max F1 on validation"
