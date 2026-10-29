@@ -6,3 +6,4 @@ catboost_info/
 .venv
 .DS_Store
 check_outputs.py
+outputs/evaluation/model_predictions_partial.csv
