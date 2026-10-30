@@ -188,27 +188,29 @@ pip install -r requirements.txt
 
 ## 9. Team Git Workflow
 
-- Each member works on a **separate branch** (`feature/<name>-<description>`) and does not commit directly to `main`.
-- Push branches to GitHub and create a **Pull Request** for team review before merging.
-- Keep commit messages concise and descriptive. Do not commit large datasets or temporary files; these are excluded through `.gitignore`.
+- Mixed Development Environments: The project began with a hybrid setup. Some team members developed locally and pushed directly to the repository, while others utilised Google Colab for data exploration and initial modelling.
+- Iterative Synchronization: Because of these differing environments, early collaboration relied on direct commits and manual file updates—such as replacing older Colab notebooks—rather than a strict feature-branching or Pull Request review process.
+- Consolidated Repository Management: As the machine learning pipeline and reporting stabilized, development consolidated around local Git workflows. Throughout all phases, large datasets, local virtual environments, and temporary files were strictly excluded using .gitignore to maintain a clean codebase.
 
 ## 10. Limitations and Future Work
 
 ### Limitations
 
-- Model discrimination is limited (AUC = 0.68), and the 1999–2008 dataset may not reflect current practice or capture social and post-discharge factors.
-- No external validation was available, and results were based on a single patient-grouped train/test split and validation split.
-- Statistical tests have independence assumptions, while confidence intervals and primary p-values account for patient-level clustering.
-- Threshold and cost analyses rely on illustrative assumptions and do not account for hospital capacity constraints.
-- Subgroup estimates for small groups are noisy, and observed gaps do not establish unfair treatment.
-- No feature-importance, SHAP, or ablation analysis was conducted; comparisons with published results are descriptive.
+- Weak associations: Highest correlation = 0.167; Cramér's V = 0.112.
+- Limited EDA: Univariate analysis; plots show counts, not readmission rates.
+- Information loss: Winsorization, broad ICD-9 grouping, and missing-value handling.
+- Limited validation: One patient-level split; no external or temporal validation.
+- Outdated data: 130 US hospitals (1999–2008); may not reflect current practices.
+- Model limitations: One-hot encoding and limited tuning (20 configurations); no significant improvement over default CatBoost.
+- Threshold and interpretation: F1-based threshold, assumed costs, and no SHAP or feature ablation.
 
 ### Future Work
 
-- Validate the model on more recent or external data, use temporal validation, and repeat patient-grouped splits to assess robustness.
-- Estimate costs using health-economic studies or hospital data and incorporate capacity constraints.
-- Evaluate tiered thresholds, calibration, and fairness across patient groups.
-- Add feature-importance and SHAP analyses, and test the contribution of the seven engineered features using the same grouped evaluation protocol and AP as the primary metric.
+- Robust evaluation: Repeated or nested patient-grouped cross-validation and external validation.
+- Calibration and cost: Calibrate predictions and optimize thresholds using hospital-specific costs.
+- Fairness: Decision curves, Recall@k, subgroup confidence intervals, and fairness analysis.
+- Richer features: Longer utilization history, lab results, clinical notes, and medication changes.
+- Model improvement: Native categorical CatBoost, alternative models, and SHAP analysis.
 
 ## 11. References
 
@@ -218,5 +220,4 @@ pip install -r requirements.txt
 - Strack et al. (2014). *Impact of HbA1c Measurement on Hospital Readmission Rates.*
 - Centers for Medicare & Medicaid Services (CMS). *Hospital Readmissions Reduction Program (HRRP).*
 - `scikit-learn` and `CatBoost` documentation.
-- 
 For detailed methodology, analysis, and the complete references, please refer to the project report.
